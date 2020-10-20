@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnabas Groceries Store</title>
+    <link rel="Stylesheet" href="TransactionPageStyle.css"/>
+</head>
+<body>
+    <!--header-->
+    <header class="header">
+        <h1 class="heading"><span style="color: white;">BARNABAS</span> GROCERIES STORE</h1>
+        <section class="image-section">
+            <img class= "image" src="./Logo.jpg" alt="Logo"/>
+        </section>
+        <h2 class="heading">...your number one stop for <span style="color: white;">best purchase deals</span></h2>
+    </header>
+
+    <!--Main-->
+    <label for="main-content" class="label">Items Purchase</label>
+    <main role="main" id="main-content">
+        <section class="section-one">
+            <h3 class="heading">Select Items For Pick-Up</h3>
+            <label for="items" class="label">Items</label>
+            <section id="items">
+                <button class="button">Tumeric</button>
+                <button class="button">KFC Bread</button>
+                <button class="button">Wrath Of God Pepper</button>
+                <button class="button">Waffle</button>
+                <button class="button">Milk</button>
+                <button class="button">Soda</button>
+                <button class="button">Pasta</button>
+                <button class="button">Marshmallow</button>
+                <button class="button">Cashew</button>
+                <button class="button">Mayonnaise</button>
+                <button class="button">Corn Flakes</button>
+                <button class="button">Bottle water</button>
+                <button class="button">Pork</button>
+                <button class="button">Beans</button>
+                <button class="button">Rice</button>
+                <button class="button">Potash</button>
+                <button class="button">Oats</button>
+                <button class="button">Garlic</button>
+                <button class="button">Yoghurt</button>
+                <button class="button">Flour</button>
+                <button class="button">OK</button>
+            </section>
+        </section>
+        <br/><br/><br/><br/>
+
+        <label for="transaction" class="label">Transaction Section</label>
+        <section class="section-two" id="transaction">
+            <h3 class="heading">Transaction Completion Form</h3>
+            <label for="form" class="label">Form</label>
+            <form id="form">
+                <label for="account-name">Account Name</label>
+                <input  id="account-name" class="input" type="text" placeholder="surname first" autofocus/>
+    
+                <label for="account-number">Account Number</label>
+                <input id="account-number" class="input" type="number" placeholder="ten-digit NUBAN" autofocus/>
+    
+                <label for="submitter">Submit</label>
+                <input id="submitter" class="input" type="submit"/>
+            </form>
+        </section>
+    </main>
+    
+    <!--Script-->
+    <script type="text/javascript" src="TransactionCode.js"></script>
+</body>
+</html>

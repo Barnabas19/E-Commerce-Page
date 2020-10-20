@@ -1,0 +1,117 @@
+/* BORDER-BOX DECLARATION */
+html,
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* MOBILE FIRST */
+/* The Header */
+body{
+    font-family: sans-serif;
+    padding-top: 150px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    background: linear-gradient(black, blue);
+    border-bottom: 6px solid rgb(230, 113, 5);
+    color: rgb(245, 102, 7);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+h1.heading{
+    flex: 0 0 60%;
+    margin: 2px 20% 0 20%;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.7;
+}
+.image-section{
+    flex: 0 0 20%;
+    margin: 2px 40% 0 40%;
+    height: 40px;
+}img{
+    height: 100%;
+    width: 100%;
+    border: 0.1px solid black;
+    border-radius: 50%;
+}
+h2.heading{
+    flex: 0 0 80%;
+    margin: 0 10% 2px 10%;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* The Main */
+/* First section of main content */
+.label{
+    position: absolute;
+    top: -10px;
+}
+#main-content{
+    width: 100%;
+}
+.section-one{
+    width: 100%;
+    background-color: black;
+    padding-top: 15px;
+}
+h3.heading{
+    width: 50%;
+    margin: 10px 25% 0 25%;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.8;
+    color: white;
+}
+#items{
+    width: 90%;
+    margin: 10px 5% 0 5%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.button{
+    flex: 0 0 44%;
+    margin-left: 4%;
+    margin-bottom: 6px;
+    height: 40px;
+    color: rgb(34, 33, 33);
+    background-color: rgb(223, 217, 217);
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+}
+.button:last-child{
+    background-color: rgb(231, 108, 6);
+}
+
+/* Second section of main content */
+.section-two{
+    width: 100%;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+}
+#form{
+    width: 60%;
+    margin: 20px 20% 0 20%;
+}
+input{
+    margin-bottom: 14px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    display: block;
+}
+input:last-child{
+    width: 50%;
+    background-color: rgb(231, 108, 6);
+}
