@@ -22,7 +22,7 @@
     <meta name="description" content="Make purchases online and get them delivered in time">
 </head>
 <body>
-    <!--header-->
+    <!--begin header-->
     <header class="header">
         <h1 class="heading"><span style="color: white;">BARNABAS</span> GROCERIES STORE</h1>
         <section class="image-section">
@@ -30,15 +30,46 @@
         </section>
         <h2 class="heading">...your number one stop for <span style="color: white;">best purchase deals</span></h2>
     </header>
+    <!--end header-->
 
-    <!--Main-->
+    <!--begin prompt section-->
+    <section class="prompt">
+        <p class="prompt-paragraph">Please enter the number of units you want to purchase</p>
+        <label for="number-of-units" class="label">Number of units to be purchased</label>
+        <input type="number" placeholder="number of units" id="number-of-units" autofocus/>
+        <button class="enter">ENTER</button>
+    </section>
+    <!--end prompt section-->
+
+    <!--begin bill notice section-->
+    <section class="bill-notice">
+        <p class="purchase-details"></p>
+        <button class="proceed">PROCEED</button>
+    </section>
+    <!--end bill notice section-->
+
+    <!--begin successful/unsuccessful transaction notice-->
+    <section class="successful">
+        <p class="successful-paragraph"></p>
+        <button class="end">OK</button>
+    </section>
+    <!--end successful/unsuccessful transaction notice-->
+
+    <!--begin invalid account number notice-->
+    <section class="invalid">
+        <p class="invalid-paragraph"></p>
+        <button class="end">OK</button>
+    </section>
+    <!--end invalid account number notice-->
+
+    <!--begin Main-->
     <label for="main-content" class="label">Items Purchase</label>
     <main role="main" id="main-content">
         <section class="section-one">
             <h3 class="heading">Select Items For Pick-Up</h3>
             <label for="items" class="label">Items</label>
             <section id="items">
-                <button class="button">Tumeric</button>
+                <button class="button" id="first-button">Tumeric</button>
                 <button class="button">KFC Bread</button>
                 <button class="button">Wrath Of God Pepper</button>
                 <button class="button">Waffle</button>
@@ -58,7 +89,7 @@
                 <button class="button">Garlic</button>
                 <button class="button">Yoghurt</button>
                 <button class="button">Flour</button>
-                <button class="button">OK</button>
+                <button class="OK">OK</button>
             </section>
         </section>
         <br/><br/><br/><br/>
@@ -75,10 +106,11 @@
                 <input id="account-number" class="input" type="number" placeholder="ten-digit NUBAN" autofocus/>
     
                 <label for="submitter">Submit</label>
-                <input id="submitter" class="input" type="submit"/>
+                <input id="submitter" class="submit-button" type="submit"/>
             </form>
         </section>
     </main>
+    <!--end Main-->
     
     <!--Script-->
     <script type="text/javascript" src="TransactionCode.js"></script>
