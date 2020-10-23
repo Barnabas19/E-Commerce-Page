@@ -24,6 +24,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 1;
+    animation: appearance 5s ease;
 }
 h1.heading{
     flex: 0 0 60%;
@@ -31,16 +32,19 @@ h1.heading{
     text-align: center;
     font-size: 18px;
     opacity: 0.7;
+    animation: appearance 5s ease;
 }
 .image-section{
     flex: 0 0 20%;
     margin: 2px 40% 0 40%;
     height: 40px;
+    animation: appearance 5s ease;
 }img{
     height: 100%;
     width: 100%;
     border: 0.1px solid black;
     border-radius: 50%;
+    animation: appearance 5s ease;
 }
 h2.heading{
     flex: 0 0 80%;
@@ -48,6 +52,7 @@ h2.heading{
     text-align: center;
     font-size: 14px;
     opacity: 0.7;
+    animation: appearance 5s ease;
 }
 
 /* Notice sections */
@@ -93,7 +98,8 @@ h2.heading{
 }
 .enter,
 .proceed,
-.end{
+.end,
+.incorrect{
     width: 50%;
     height: 40px;
     margin: 14px 25% 14px 25%;
@@ -110,6 +116,7 @@ h2.heading{
         opacity: 1.0;
     }
 }
+
 
 /* The Main */
 /* First section of main content */
@@ -149,6 +156,7 @@ h3.heading{
     font-size: 14px;
     border-radius: 10px;
     border: none;
+    animation: appearance 10s ease;
 }
 .OK{
     background-color: rgb(231, 108, 6);
