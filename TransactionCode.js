@@ -8,10 +8,6 @@ const[tumeric, kfcBread, wrathOfGodPepper, waffle, milk, soda, pasta,
         100, 900, 200, 150, 700, 50, 300, 170, 200, 120, 500, 100,
         250, 500];
 
-//focusing on first item after page first loads (for accessibility)
-const firstButton = document.getElementById("first-button");
-firstButton.focus();
-
 
 let itemsToBePurchased = []; //data structure containing items to be purchased
 let totalCost = 0; //initial total cost of items to be purchased
@@ -142,10 +138,13 @@ function updateTotalCost(items){  //Updates total cost
     } 
     billNotice.style.display = "block";
     purchaseDetails.textContent = `Your bill is ${String(totalCost)} Naira. Please enter your account details to complete transaction`;
+    proceed.focus();
 }
+const accountNameInput = document.getElementById("account-name");
 const proceed = document.querySelector(".proceed");
 proceed.addEventListener("click", function(){
     billNotice.style.display = "none";
+    accountNameInput.focus();
 });
 
 function zeroCostAndItems(){  //zeroes total cost and items to be purchased  
@@ -162,7 +161,8 @@ const input = document.querySelectorAll(".input");
 const submit = document.querySelector(".submit-button");
 const invalid = document.querySelector(".invalid");
 const invalidParagraph = document.querySelector(".invalid-paragraph");
-submit.addEventListener("click", function(){
+submit.addEventListener("click", function(event){
+    event.preventDefault();
     for(let i=0; i<input.length; i++){
         if(isNaN(parseInt(input[i].value))){  //checks if input is user's account name or account number
             accountName = String(input[i].value);  //input is user's account name
@@ -173,6 +173,7 @@ submit.addEventListener("click", function(){
             else{
                 invalid.style.display = "block";
                 invalidParagraph.textContent = "INVALID ACCOUNT NUMBER";
+                incorrect.focus();
             }
         }
     }
@@ -181,23 +182,33 @@ submit.addEventListener("click", function(){
 
 
 //REPLACEMENT FOR BANKING API;
+const successful = document.querySelector(".successful");
+const successfulParagraph = document.querySelector(".successful-paragraph");
 function checkAffordability(){
-    const successful = document.querySelector(".successful");
-    const successfulParagraph = document.querySelector(".successful-paragraph");
     if(accountNumber){
         if(accountName.length >= 28){
             successful.style.display = "block";
             successfulParagraph.textContent = `Transaction successful! You have been debited by an amount of ${debit} Naira`;
+            end.focus();
         }else{
             successful.style.display = "block";
             successfulParagraph.textContent = `Sorry, you do not have sufficient funds to proceed with this transaction.`;
+            end.focus();
         }
     }
 }
 
-/*
+//INVALID ACCOUNT NUMBER
+const incorrect = document.querySelector(".incorrect");
+incorrect.addEventListener("click", function(){
+    invalid.style.display = "none";
+    window.location.reload();
+});
+
+//END TRANSACTION
 const end = document.querySelector(".end");
 end.addEventListener("click", function(){
     successful.style.display = "none";
-});*/
+    window.location.reload();
+});
 
